@@ -42,8 +42,11 @@ public class SecurityConfig {
                                 "/api/users/signup",
                                 "/api/auth/login",
                                 "/api/categories",
+                                "/api/posts",
+                                "/api/posts/**",
                                 "/swagger-ui/**",
-                                "/v3/api-docs/**"
+                                "/v3/api-docs/**",
+                                "/uploads/**"
                         ).permitAll()
                         // 관리자만 접근 가능
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")

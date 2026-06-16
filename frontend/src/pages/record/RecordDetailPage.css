@@ -1,0 +1,207 @@
+.record-detail-container {
+    min-height: 100vh;
+    background-color: #f9fafb;
+}
+
+.record-detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.record-detail-header {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid #e5e7eb;
+}
+
+.record-detail-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 8px 0;
+}
+
+.record-detail-date {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* 통계 카드 */
+.record-stats-card {
+    background: #2563eb;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.record-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.record-stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.record-stat-label {
+    font-size: 14px;
+    color: #bfdbfe;
+}
+
+.record-stat-divider {
+    width: 1px;
+    height: 50px;
+    background: #93c5fd;
+}
+
+/* 사진 */
+.record-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.record-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 라이딩 일지 */
+.record-diary {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid #e5e7eb;
+}
+
+.record-diary h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 16px 0;
+}
+
+.record-diary p {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.8;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* 액션 버튼 */
+.record-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.share-btn {
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.delete-btn {
+    padding: 12px 24px;
+    background: #fee2e2;
+    color: #ef4444;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 모달 */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.modal {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 440px;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 20px 0;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-form input,
+.modal-form select {
+    padding: 12px 14px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.modal-form input:focus,
+.modal-form select:focus {
+    border-color: #2563eb;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.cancel-btn {
+    padding: 10px 20px;
+    background: #f3f4f6;
+    color: #6b7280;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}

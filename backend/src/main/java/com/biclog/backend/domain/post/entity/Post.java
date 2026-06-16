@@ -1,6 +1,7 @@
 package com.biclog.backend.domain.post.entity;
 
 import com.biclog.backend.domain.category.entity.Category;
+import com.biclog.backend.domain.category.entity.SubCategory;
 import com.biclog.backend.domain.record.entity.Record;
 import com.biclog.backend.domain.user.entity.User;
 import jakarta.persistence.*;
@@ -51,21 +52,26 @@ public class Post {
     @Column(name = "UPDATED_AT", nullable = false)
     private LocalDateTime updatedAt;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "SUB_CATEGORY_ID")  // nullable (선택사항)
+    private SubCategory subCategory;
+
     @Builder
-    public Post(User user, Category category, Record record, String title, String content) {
-        this.user     = user;
-        this.category = category;
-        this.record   = record;
-        this.title    = title;
-        this.content  = content;
+    public Post(User user, Category category, Record record, SubCategory subCategory, String title, String content) {
+        this.user        = user;
+        this.category    = category;
+        this.record      = record;
+        this.subCategory = subCategory;
+        this.title       = title;
+        this.content     = content;
     }
 
     // == 수정 메서드 ==
-    public void update(String title, String content, Category category, Record record) {
+    public void update(String title, String content, Category category, SubCategory subCategory) {
         this.title    = title;
         this.content  = content;
         this.category = category;
-        this.record   = record;
+        this.subCategory = subCategory;
     }
 
     public void increaseViewCount() {

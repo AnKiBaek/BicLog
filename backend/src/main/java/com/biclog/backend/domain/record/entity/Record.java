@@ -46,11 +46,16 @@ public class Record {
     @Column(name = "CREATED_AT", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    @Lob
+    @Column(name = "CONTENT")
+    private String content; // 라이딩 중 있었던 일
+
     @Builder
-    public Record(User user, String title, LocalDateTime startTime, LocalDateTime endTime,
+    public Record(User user, String title, String content, LocalDateTime startTime, LocalDateTime endTime,
                   Integer durationMin, BigDecimal distanceKm, String gpxData) {
         this.user        = user;
         this.title       = title;
+        this.content     = content;
         this.startTime   = startTime;
         this.endTime     = endTime;
         this.durationMin = durationMin;
@@ -58,9 +63,10 @@ public class Record {
         this.gpxData     = gpxData;
     }
 
-    public void update(String title, LocalDateTime startTime, LocalDateTime endTime,
+    public void update(String title, String content, LocalDateTime startTime, LocalDateTime endTime,
                        Integer durationMin, BigDecimal distanceKm, String gpxData) {
         this.title       = title;
+        this.content     = content;
         this.startTime   = startTime;
         this.endTime     = endTime;
         this.durationMin = durationMin;

@@ -15,4 +15,10 @@ public interface AttachmentRepository extends JpaRepository<Attachment, Long> {
 
     // 특정 게시글의 첨부파일 전체 삭제
     void deleteByPostPostId(Long postId);
+
+    // Record 첨부파일 조회
+    List<Attachment> findByRecordRecordId(Long recordId);
+
+    // Record 첨부파일 삭제
+    void deleteByRecordRecordId(Long recordId);
 }

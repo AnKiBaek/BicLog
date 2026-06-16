@@ -1,0 +1,135 @@
+.main-container {
+    min-height: 100vh;
+    background-color: #f9fafb;
+}
+
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    position: relative;
+}
+
+/* 카테고리 탭 */
+.category-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0;
+}
+
+.tab {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    color: #2563eb;
+}
+
+.tab.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+}
+
+/* 게시글 목록 */
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.post-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    cursor: pointer;
+    border: 1px solid #e5e7eb;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.post-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: #2563eb;
+}
+
+.post-item-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.post-category {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.post-subcategory {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    background-color: #f3f4f6;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.post-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 12px 0;
+}
+
+.post-item-footer {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.post-author {
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.post-empty {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 15px;
+    padding: 60px 0;
+}
+
+/* 글쓰기 버튼 */
+.write-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 14px 24px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.write-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
